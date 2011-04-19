@@ -1,0 +1,7 @@
+*~
+CVS*
+*.pyc
+*.db
+*.trn
+log/*
+*.swp

@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20031027;15165848">
+	<META NAME="CHANGED" CONTENT="20031027;15425874">
+	<STYLE>
+	<!--
+		@page { size: 21.59cm 27.94cm }
+		TD P { color: #ffffff }
+		<!-- TD P.western { font-family: sans-serif; so-language: en-US } -->
+		TD P.western { font-family: "Arial Unicode MS"; font-size: 12pt; font-weight: medium }
+		H1 { color: #ffffff }
+		H1.western { font-family: sans-serif; so-language: en-US }
+		H1.cjk { font-family: "HG Mincho Light J", "MS Mincho", "HG Mincho J", "HG Mincho L", "HG Mincho", "Mincho", "MS PMincho", "MS Gothic", "HG Gothic J", "HG Gothic B", "HG Gothic", "Gothic", "MS PGothic", "Andale Sans UI", "Arial Unicode MS", "Lucida Sans Unicode", "Tahoma"; font-size: 12pt; font-weight: medium }
+		H1.ctl { font-family: "Arial Unicode MS"; font-size: 12pt; font-weight: medium }
+		P { color: #ffffff }
+		P.western { font-family: sans-serif; so-language: en-US }
+		TH P { color: #ffffff }
+		TH P.western { font-family: sans-serif; so-language: en-US }
+		TH P.cjk { font-weight: medium }
+		TH P.ctl { font-weight: medium }
+		A:link { color: #ccccff }
+	    A:visited { color: #ccccff }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#ffffff" LINK="#ccccff" VLINK="#ccccff" BGCOLOR="#666699">
+<h1><div align="center"><a href="index.html" style="text-decoration:none">
+<font color="#ffffff">Pro Wrestling Superstar</font></a></div></h1>
+<div align="center"><h2>Gameplay</h2></div>
+<hr>
+<br>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=59*>
+	<COL WIDTH=197*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD ROWSPAN=2 WIDTH=23%>
+				<P CLASS="western"><font face="Arial"><B>
+				 <a href="#MatchSetup" style="text-decoration:none"><font color="#ffffff">Match Setup</font></a></B><br>
+				<FONT COLOR="#ccccff"><U><A HREF="#MatchParams|region">Match
+				Parameters</A></U><br>
+				<U><A HREF="#TeamSetup|region">Team
+				Setup</A></U><br>
+				<U><A HREF="#Ready|region">Start Match</A>
+				</U></FONT><br>
+				</P></font>
+
+                <!-- Match Execution -->
+				<P CLASS="western"><font face="Arial"><B>
+				<a href="#MatchExec" style="text-decoration:none"><font color="#ffffff">
+				  Match Execution</font></a></B><br>
+				<FONT COLOR="#ccccff"><U><A HREF="#MatchLogic|region">Match
+				Logic</A></U><br>
+				<U><A HREF="#GenCard|region">General
+				Card Roll</A></U><br>
+				<u><A HREF="#OffCardRoll|region">Offensive
+				Card Roll</A></u><br>
+				<u><A HREF="#DefCardRoll|region">Defensive
+				Card Roll</A></u><br>
+				<u><A HREF="#AfterRound|region">After
+				the Round</A></u><br>
+				<u><A HREF="#Priority|region">Priority
+				Factor</A></u><BR></font>
+				</P></font>
+				
+				<!-- Tag Team Matches -->
+				<P CLASS="western"><font face="Arial"><B><a href="#TagMatches" style="text-decoration:none">
+				    <font color="#ffffff">Tag Team Matches</font></a></B><br>
+				<FONT COLOR="#ccccff"><U><a href="#TagOut">Tagging Out</a></U><br>
+				<U><a href="#TagFactor">Tag Team Factor</a></U><br>
+				<U><a href="#DoubleTeaming">Double and Triple Teaming</a></U><br>
+				<U><a href="#Injuries">Injuries</a></U><br>				
+				</FONT>
+				</P></font>
+
+				<!-- Referee Factor -->
+				<P CLASS="western"><font face="Arial"><B><a href="#Ref" style="text-decoration:none">
+				<font color="#ffffff">Referee Factor</font></a></B></font><br>
+			</TD>
+			<TD WIDTH=77%>
+				<H1 CLASS="western"><a name="MatchSetup">Match Setup</a></H1>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=77% VALIGN=TOP>
+				<DIV ID="MatchParams"><A NAME="MatchParams|region"></A>
+					<P CLASS="western"><FONT FACE="Arial, sans-serif"><I><B>Match
+					Parameters</B></I></FONT></P>
+				</DIV>
+				<P CLASS="western"><FONT FACE="Arial, sans-serif">In order to
+				start a match select Run -&gt; Run Match from the menu. Once
+				you've done this you will be presented with the Match Setup
+				interface:</FONT></P>
+				<UL>
+					<LI><P CLASS="western"><FONT FACE="Arial, sans-serif">Match Type
+					- The type of match to run</FONT></P>
+					<LI><P CLASS="western"><FONT FACE="Arial, sans-serif">Time Limit
+					- The length of the match. Checking “No Time Limit”
+					will allow the match go until there is a finish (pinfall, DQ,
+					submission)</FONT></P>
+					<LI><P CLASS="western"><FONT FACE="Arial, sans-serif">DQ Enabled
+					– If checked, wrestlers can be counted out</FONT></P>
+					<LI><P CLASS="western"><FONT FACE="Arial, sans-serif">Dramatic
+					Pause – Checking this will add “drama” to the
+					match. For example when a pinfall is attempted, a realistic pin
+					count will be executed with one second between each count.</FONT></P>
+				</UL><br>
+
+				<!-- Team Setup Section -->
+				<DIV ID="TeamSetup"><A NAME="TeamSetup|region"></A>
+					<P CLASS="western"><FONT FACE="Arial, sans-serif"><I><B>Team
+					Setup</B></I></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal"><FONT FACE="Arial, sans-serif">To
+				add a wrestler(s) to a team, click the “Add...”
+				button beneath the team box. After clicking “Add...”
+				you will be presented with the Wrestler Selection dialog. You can
+				select up to three wrestlers in this dialog by clicking on them.
+				After your selections have been made click “OK”. The
+				selected wrestlers should now appear in the team box.</FONT></P>
+				<P CLASS="western" STYLE="font-style: normal"><FONT FACE="Arial, sans-serif">In
+				the teambox next to each wrestler is a checkbox. Clicking a
+				wrestler's checkbox will make that wrestler computer controlled.
+				All dice rolls and decisions for that wrestler will be made by
+				the program.</FONT></P>
+				<P CLASS="western" STYLE="font-style: normal"><FONT FACE="Arial, sans-serif">To
+				remove a wrestler(s) from a team, select the wrestler(s) you wish
+				to remove and then click the “Delete Selected”
+				button.</FONT></P><br>
+                
+				<!-- Start Match -->
+				<DIV ID="Ready"><A NAME="Ready|region"></A>
+					<P CLASS="western"><FONT FACE="Arial, sans-serif"><I><B>Start
+					Match</B></I></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal"><FONT FACE="Arial, sans-serif">Click
+				the “Start Match” button to begin the action...</FONT></P>
+                
+				<!-- Match Execution Chapter -->
+				<hr>
+				<H1 CLASS="western"><a name="MatchExec">Match Execution</a></H1>
+				<DIV ID="MatchLogic"><A NAME="MatchLogic|region"></A>
+					<P CLASS="western" STYLE="margin-top: 0.42cm; page-break-after: avoid">
+					<FONT FACE="Arial, sans-serif"><FONT SIZE=3><I><B>Match Logic</B></I></FONT></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="margin-top: 0.42cm; font-weight: medium; page-break-after: avoid">
+				<FONT FACE="Albany, sans-serif"><FONT SIZE=3>The following
+				section details the program logic Pro Wrestling Superstar uses to
+				run a match. The majority of the work is handled by the program,
+				but reading the section may be helpful for understanding what is
+				occurring during the match. The majority of the “dice
+				rolls” that occur are 2D6 (two six sided die rolls
+				resulting in values between 2-12) dice rolls. The only roll that
+				differs is the Specialty Card roll, which is a 1D6 (one six sided
+				die roll resulting in values between 1-6) roll.</FONT></FONT></P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial, sans-serif">A match is broken up into a series
+				of rounds. Each round represents one minute of ring time. A
+				typical round conisists of:</FONT></P>
+				<OL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">Team 1's wrestler in the ring
+					rolls on their General Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">Team 2's wrestler in the ring
+					rolls on their General Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">Wrestler(s) on offense (based on
+					the General Card roll) rolls on the Offensive Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">If anyone is on defense (it's
+					possible for both men in the ring to be on offense in a round),
+					that wrestler rolls on their Defensive Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">If the defensive wrestler
+					reverses the offensive move, the defensive wrestler now becomes
+					an offensive wrestler and rolls on the Offensive Card. The
+					former offensive wrestler now rolls on the defensive card. This
+					step is repeated until an offensive move is not reversed.</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">Once moves have been resolved,
+					all scoring takes place. Then pinfalls, submissions, and Dqs are
+					handled in this step</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">If the match has not ended goto
+					Step 8 otherwise the winner(s) and the finish are displayed.</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">If in a tag match and a wrestler
+					is eligible, the wrestler can tag out</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">Goto step 1</FONT></P>
+				</OL>
+				<!-- General Card Roll Section -->
+				<br>
+				<DIV ID="GenCard"><A NAME="GenCard|region"></A>
+					<P CLASS="western"><FONT FACE="Arial, sans-serif"><I><B>General
+					Card Roll</B></I></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial, sans-serif">The wrestler in the ring (this
+				wrestler's name will be in bold letters above the ActionCard) for
+				Team 1 will be the first to roll on the General Card each round.
+				To make a dice roll, click the “Roll Dice” button.
+				The General Card roll determines whether the wrestler will be on
+				offense or defense for the round. After the Team 1 wrestler has
+				made their roll, then the Team 2 wrestler in the ring will make
+				their General Card roll. The General Card roll results will be
+				highlighted in yellow after the General card roll has been made.
+				Below, the various General Card roll results are defined:</FONT></P>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">OC – Roll on the Offensive
+					Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">DC – Roll on the Defensive
+					Card</FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">OC/TT – Roll on the
+					Offensive card, however if you are in a tag team match this will
+					initiate double teaming if there is no double teaming occuring
+					already by either team.</FONT></P>
+				</UL>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial, sans-serif">If both wrestlers in the ring roll
+				“DC”, then they will REROLL in on their respective
+				General Cards, until at least one player rolls “OC”.</FONT></P>
+
+                <!-- Offensive Card Roll Section -->
+				<br>
+				<DIV ID="OffCardRoll"><A NAME="OffCardRoll|region"></A>
+					<P CLASS="western"><FONT FACE="Arial, sans-serif"><I><B>Offensive
+					Card Roll</B></I></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial, sans-serif"><FONT FACE="Arial">If a player
+				rolls “OC” on their General Card, they will need to
+				make an Offensive Card roll. </FONT>For each offensive move on
+				the Offensive Card there is a point total which indicates the
+				effectiveness of the move. Click the “Roll Dice”
+				button to make the Offensive Card roll. After the roll has been
+				made, the Offensive Card roll result will be highlighted in
+				yellow.</FONT></P>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">ROPES:<I> </I>If a wrestler rolls
+					ROPES, the wrestler needs to make a roll in the ROPES section on
+					the ActionCard. Similar to the offensive card, each offensive
+					move in the ROPES section has a point total associated with it.
+					Click the “Roll Dice” button to make the ROPES card
+					roll. After the roll, the ROPES result will be highlighted in
+					yellow. If the resulting roll is “NA” that means
+					there was NO ACTION at the ropes and the offensive wrestler
+					receives 0 points for the round.</FONT></P>
+				</UL>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial, sans-serif">SPECIALTY: If an offensive move
+					on the Offensive Card or in the ROPES section is followed by an
+					“(S)”, this means that the wrestler's specialty move
+					will be attempted. To attempt the move, the wrestler will need
+					to make a roll on the SPECIALTY section of the ActionCard. Click
+					the “Roll Dice” button to do this.After the roll,
+					the SPECIALTY result will be highlighted in yellow. Each item in
+					the SPECIALTY section has a point total which represents the
+					effectiveness of the specialty move.</FONT></P>
+				</UL>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial">P/A” and “*”: Some moves on
+					the Offensive card will be followed by will be followed by a
+					“P/A”, which means Pin Attempt. This means that the
+					wrestler will attempt to make a pin at the end of the round. A
+					move may also be followed by a “*”, which means the
+					move is a submission hold.&nbsp; At the end of the round a
+					submission check will be made to see if the “victim”
+					submits.</FONT></P>
+				</UL>
+
+				<!-- Defensive Card Roll -->
+				<br>
+				<DIV ID="DefCardRoll"><A NAME="DefCardRoll|region"></A>
+					<P CLASS="western"><FONT FACE="Arial"><FONT SIZE=3><I><B>Defensive
+					Card Roll</B></I></FONT></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>If a player rolls “DC”
+				on their General Card, they will need to make a Defensive Card
+				roll. Click the “Roll Dice” button when prompted to
+				roll on the Defensive Card.&nbsp; The Defensive Card roll result
+				will be highlighted in yellow. The Defensive Card moves are
+				designated by the following codes:</FONT></FONT></P>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>“A” – The
+					wrestler gets 2 points for attempting to break the offensive
+					hold</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>“B” – The
+					wrestler gets 0 points since they simply absorb the punishment
+					of the offensive move</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>“C” – The
+					wrestler gets 4 points for completely neutralizing the offensive
+					move. The offensive wrestler scores 0 points for the round.</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>“REVERSE” –
+					The defensive wrestler now becomes the offensive wrestler and
+					rolls on the Offensive Card. The wrestler who initially was on
+					offense is now a defensive wrestler and must roll on the
+					Defensive Card</FONT></FONT></P>
+				</UL>
+
+				<!-- After the Round Section -->
+				<br>
+				<DIV ID="AfterRound"><A NAME="AfterRound|region"></A>
+					<P CLASS="western"><FONT FACE="Arial"><FONT SIZE=3><I><B>After
+					the Round</B></I></FONT></FONT></P>
+				</DIV>
+				<P CLASS="western"><FONT FACE="Arial"><FONT SIZE=3>After all
+				moves have been resolved, it is now time to check for any
+				submissions, count outs, or pin attempts. </FONT></FONT>
+				</P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3><I>Pin Attempts</I> – A
+				wrestler may attempt a pin when:</FONT></FONT></P>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>The wrestler rolls “P/A”
+					on the Offensive Card, ROPES, or SPECIALTY section, OR</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>The wrestler (or the wrestler’s
+					team in a tag match) has 30 or more total points, has at least
+					10 more total points than the opposing wrestler, and has
+					outscored the opposing wrestler by 5 points in the current
+					round. The program will take care of this calculation and ask
+					the eligible wrestler if they wish to go for the pin.</FONT></FONT></P>
+				</UL>
+				<P CLASS="western"><FONT FACE="Arial"><FONT SIZE=3>If a pin
+				attempt is made, the referee will make the count and the result
+				will be displayed. If the pin eligible wrestler’s pin
+				attempt is unsuccessful he will get some points for making the
+				pin attempt. The match then proceeds to the next round. If
+				someone is pinned, the match ends and the move that led to the
+				pin is displayed.</FONT></FONT></P>
+				<P CLASS="western"><FONT FACE="Arial"><I>SUBMISSIONS</I> –
+				If an offensive wrestler rolls a submission move (an offensive
+				move followed by a “*”) a submission roll will
+				automatically be made for the unfortunate victim of the
+				submission move. The roll is made against the “SUB”
+				cell on the action card. If the roll falls within the range
+				listed in the “SUB” section on the ActionCard the
+				wrestler submits. The submission roll result will be displayed.
+				If no one submits, the match proceeds to the next round.</FONT></P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3><I>DISQUALIFICATIONS </I>–
+				If an offensive wrestler rolls a DQ move (an offensive move
+				followed by a “(DQ)” such as “THROW OUT OF RING
+				(DQ)”) a DQ roll will automatically be made for the victim
+				of DQ move. The DQ roll result will be displayed. If no one is
+				counted out, the match proceeds to the next round. NOTE: It’s
+				possible for both wrestlers to be counted out if both wrestlers
+				roll a DQ move.</FONT></FONT></P>
+
+				<!-- Priority factor Section -->
+				<br>
+				<DIV ID="Priority"><A NAME="Priority|region"></A>
+					<P CLASS="western"><FONT FACE="Arial"><FONT SIZE=3><I><B>Priority
+					Factor and its Effect During a Match</B></I></FONT></FONT></P>
+				</DIV>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>The Priority Factor (which are
+				the two numbers in the PRIORITY cell on the ActionCard) comes
+				into play when two opposing wrestlers, who are both on offense,
+				roll any combination of “P/A”, “*”, or
+				“(S)” in the SAME round. The Priority Factor
+				determines which wrestler's move prevails. The wrestler with the
+				higher Priority Factor will get the points for their move while
+				the wrestler with the lower Priority Factor gets zero points for
+				the round. If both wrestlers have the same Priority Factor, both
+				wrestlers get zero points for the round. In a singles match, the
+				first number in the PRIORITY cell is used and in a tag match the
+				second number is used. The program will ensure that this rule is
+				enforced.</FONT></FONT></P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>Champion Bonus – When a
+				wrestler becomes a champion, the Priority Factor should be
+				increased by one for the duration of their title reign. Remember
+				to use the first number for a singles championship and the second
+				number for a tag team championship. Currently the program does
+				not adjust the Priority Factor for a wrestler when they win a
+				championship, so the wrestler's Priority Factor will have to be
+				adjusted manually.</FONT></FONT></P>
+                
+				<!-- Tag Team Match Chapter -->
+				<hr>
+				<H1 CLASS="western"><a name="TagMatches">Tag Team Matches</a></H1>
+				<FONT FACE="Arial"><FONT SIZE=3>Tag Team matches follow the same
+				match flow as singles matches with the addition of tagging out
+				and double teaming.</FONT></FONT></P>
+				<br>
+				<FONT FACE="Arial"><FONT SIZE=3><B><I><a name="TagOut">TAGGING OUT</a></I></B> </FONT></FONT>
+				</P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>At the end of a round a wrestler
+				must be eligible to tag out. The eligibility criteria is below:</FONT></FONT></P>
+				<font face="Arial">
+				<table width="100%" border="1" align="center" summary="">
+					<tr>
+						<th align="center">Tag Team Rating (Tag Priority Factor)</th>
+						<th>Wrestler Can Tag Out if They:</th>
+					</tr>
+					<tr>
+						<td height="24" align="center">3 or 3+</td>
+						<td height="24" align="center">WIN, LOSE, or DRAW the round</td>
+					</tr>
+					<tr>
+						<td align="center">2</td>
+						<td align="center">WIN or DRAW the round</td>
+					</tr>
+					<tr>
+						<td align="center">1</td>
+						<td align="center">WIN the round</td>
+					</tr>
+				</table></font>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>The program will check for
+				eligibility and prompt a wrestler when thery are eligible to tag
+				out. Click the “Tag Out” button to tag out. A
+				selection dialog will appear so that you can choose a wrestler to
+				tag out to or you can click “Cancel” to not tag out.
+				In the future, the ability to refuse a tag will be added.</FONT></FONT></P>
+
+				<!-- Tag Team factor Section -->
+				<br>
+				<FONT FACE="Arial"><FONT SIZE=3><I><B><a name="TagFactor">TAG TEAM
+				FACTOR</a></B></I></FONT></FONT>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>The tag team factor comes into
+				play when there is a pin or a submission hold. During a tag match
+				if one of the wrestlers in the ring is in a dire pinning
+				predicament or submission hold, the wrestler's partner will
+				attempt to make a save. The saving roll is made against the range
+				in the “TAG-TEAM” cell on the ActionCard. If the
+				saving roll falls within this range the save is made, otherwise
+				the wrestler will be pinned or will submit. The program will
+				automatically make the save roll. In a Six man tag match you will
+				be prompted to choose which wrestler should make the save.
+				Obviously the wrestler with the highest Tag Team factor would be
+				the ideal choice.</FONT></FONT></P>
+				
+				<!-- Double Teaming Section -->
+				<br>
+				<FONT FACE="Arial"><FONT SIZE=3><I><B><a name="DoubleTeaming">DOUBLE
+				(and TRIPLE) TEAMING</a></B></I></FONT></FONT>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>For purposes of the discussion
+				below, “triple teaming” = “double teaming”.</FONT></FONT></P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>If a wrestler in the ring rolls
+				OC/TT on the General Card, this initiates the double teaming
+				process. The program makes a calculation based on the tag team
+				priority of the men not in the ring (If both men in roll OC/TT on
+				their General Cards, no calculation is made and everyone is in
+				the ring for one round). The result of the calculation can result
+				in anywhere from 1 to 3 rounds (or 1 to 2 rounds in a six man
+				match) of double (or triple) teaming. The calculation can also
+				result in everyone in the ring for one round. When everyone is in
+				the ring for one round, everyone makes a roll on their offensive
+				card.  The user interface will display the number of double
+				teaming rounds left for the double teamers in the “Double
+				Team Rounds” box. </FONT></FONT>
+				</P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>In the second or third round of
+				double teaming, the double teamers must roll on their General
+				Cards. If all double teamers roll OC then they will all roll on
+				their Offensive Cards. However if a double teamer rolls DC then
+				that wrestler is on defense for the round. However, that wrestler
+				does not roll on the Defensive Card, instead the wrestler gets
+				zero points for the round. NOTE: It is possible for all double
+				teamers to be on defense in a round.</FONT></FONT></P>
+
+				<!-- Injury section -->
+				<br>
+				<FONT FACE="Arial"><FONT SIZE=3><I><B><a name="Injuries">INJURIES</a></B></I></FONT></FONT>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>While double teaming is occuring
+				it's possible for members of the shorthanded team to get injured
+				while being double teamed.  During the first round of double
+				teaming a calculation is made to check if an injury has occurred.
+				 If there is an injury, the injury can last anywhere from 2 to 10
+				rounds.  The program will display and keep track of who was
+				injured and for how many rounds.  Injured wrestlers will be
+				surrounded by a red box on the user interface.  Also the number
+				of injury rounds remaining will be displayed next to the injured
+				wrestler's name.</FONT></FONT></P>
+				<P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+				<FONT FACE="Arial"><FONT SIZE=3>When a wrestler is injured, the
+				remaining man becomes the man-in for the duration of the injury
+				(in a six man match, you will be able to choose which man-out
+				becomes the man-in).   If a team has a man injured, the opposing
+				team gets an automatic 2 on 1 for one round if they roll OC/TT. 
+				If both members of a team are injured, the opposing team rolls
+				unopposed on their offensive card for the number of injury rounds
+				remaining.</FONT></FONT></P>
+				<P CLASS="western" STYLE="font-weight: medium"><FONT FACE="Arial"><FONT SIZE=3><I>INJURY
+				NOTES</I><SPAN STYLE="font-style: normal">:</SPAN></FONT></FONT></P>
+				<UL>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>While a man is injured he is not
+					eligible to double team or make a save in the event of a pin
+					attempt or submission.</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>At the end of double teaming the
+					ref clears the ring.  The legal men are left in the ring after
+					the ref clears the ring.</FONT></FONT></P>
+					<LI><P CLASS="western" STYLE="font-style: normal; font-weight: medium">
+					<FONT FACE="Arial"><FONT SIZE=3>A pin or submission CAN NOT
+					happen while double teaming is occuring.  Neither team can
+					attempt a pin or submission while there are double teamers in
+					the ring.  However, if a submission move is attempted the
+					wrestler will get the points for the submission move, but will
+					not get the submission opportunity.</FONT></FONT></P>
+				</UL>
+				<!-- Referee Factor Chapter -->
+				<hr>
+				<FONT FACE="Arial">
+				<h1><a name="Ref">Referee Factor</a></h1>
+				<p>At the beginning of a match, a referee is assigned. The referees available are:
+				<ul>
+				    <li><p>“Fast Count” Frank – When attempting a pin there is a +1 to 
+					    the pin roll (makes a pin slightly easier to get)</li></p>
+					<li><p>“Honest” Abe – There are no bonuses or penalties to the pin roll</li></p>
+					<li><p>“Slow-Count” Sam - When attempting a pin there is a -1 to the pin roll 
+					    (makes a pin slightly harder to get)</li></p>
+				</ul>
+				"Honest Abe" should end up refereeing 85% of the matches.  The assigned referee will be 
+				displayed in the message window at the beginning of the match.
+			    </font>
+			</TD>
+		</TR>
+	</THEAD>
+</TABLE>
+</BODY>
+</HTML>
