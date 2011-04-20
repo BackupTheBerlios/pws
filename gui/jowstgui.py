@@ -303,7 +303,7 @@ class MainJowstWindow(wxPanel, Interface.BaseInterface):
         if kw['start']:
             self._setText(wxBOLD, fontColor=wxNamedColour(ROUND_COLOR))
             self._printText()
-            self._printText("===== In the %s minute of the match ====="
+            self._printText("===== In the %s minute of the match: ====="
                             % minuteString(kw['time']))
             self._printText()
 
