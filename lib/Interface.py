@@ -509,27 +509,27 @@ class BaseInterface:
     def _flushEvents(self): pass
     
     def _doCount(self, count, counttype=None, soundfunc=None, sndargs=None):
-        for c in range(1, count):
+        max = 3
+        pauseFunc = self._drama.pinPause
+        if counttype == "COUNTOUT":
+            max = 10
+            pauseFunc = self._drama.countoutPause
+            
+        for c in range(1, count + 1):
+            ellipsis = "..."
+            if c == max:
+                ellipsis = ""
+                
             self._flushEvents()
             if soundfunc:
                 if counttype == "COUNTOUT": sndargs = [c]
                 soundfunc(*sndargs)
-            self._printText(str(c)+"...", 0)
+            self._printText(str(c) + ellipsis, 0)
             self._flushEvents()
-            self._drama.pinPause(1)
+            pauseFunc(1)
             self._flushEvents()
-        self._flushEvents()
-        if soundfunc:
-            if counttype == "COUNTOUT": sndargs = [count]            
-            soundfunc(*sndargs)
-        self._printText(str(count), 0)
-        self._flushEvents()
-        if count not in (3, 10): self._printText("...", 0)
-        self._flushEvents()
-        self._drama.pinPause(1)
-        self._flushEvents()
-        self._printText()
 
+        self._printText()
         
     def _makeSave(self, **kw):
         saveMan = kw['saveman'].getName()
