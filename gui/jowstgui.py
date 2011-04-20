@@ -74,6 +74,8 @@ class MainJowstWindow(wxPanel, Interface.BaseInterface):
         self.client = None
         self._tourney = None
 
+        self.Bind(wx.EVT_ERASE_BACKGROUND, self.OnEraseBackground)
+
         # Status Window and sizer
         self.topFrameSizer = wxBoxSizer(wxHORIZONTAL)
 
@@ -1162,6 +1164,14 @@ class MainJowstWindow(wxPanel, Interface.BaseInterface):
             if path:
                 actionCard.PdfActionCard(wrestler).writePDF(path)
         dlg.Destroy()
+
+    def OnEraseBackground(self, evt):
+        dc = evt.GetDC()
+        dc.Clear()
+        img = wx.Image(os.path.join("resources", "wood-6.jpg"))
+        winSize = self.GetClientSizeTuple()
+        img = img.Scale(winSize[0], winSize[1])
+        dc.DrawBitmap(wx.BitmapFromImage(img), 0, 0)
         
         
 class JowstTeamFrame(wxPanel):
