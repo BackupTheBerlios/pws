@@ -1252,7 +1252,8 @@ class JowstTeamFrame(wxPanel):
     def clearLabels(self):
         for name in self.lblDict.keys():
             self.lblDict[name].SetLabel("")
-            self.lblDict[name].SetBackgroundColour(self.parent.defaultBG_Color)
+            if self.lblDict[name].GetBackgroundColour() != self.parent.defaultBG_Color:
+                self.lblDict[name].SetBackgroundColour(self.parent.defaultBG_Color)
             self.Layout()
             wxYieldIfNeeded()
         self.lblDict = {}
