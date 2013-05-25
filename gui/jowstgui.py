@@ -1168,7 +1168,7 @@ class MainJowstWindow(wxPanel, Interface.BaseInterface):
     def OnEraseBackground(self, evt):
         dc = evt.GetDC()
         dc.Clear()
-        img = wx.Image(os.path.join("resources", "wood-6.jpg"))
+        img = wx.Image(os.path.join(JOWST_PATH, "resources", "wood-6.jpg"))
         winSize = self.GetClientSizeTuple()
         img = img.Scale(winSize[0], winSize[1])
         dc.DrawBitmap(wx.BitmapFromImage(img), 0, 0)
