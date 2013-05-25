@@ -290,7 +290,7 @@ def getDb(path, name):
     return ResultManager(path, name)
 
 def joinWrestlerDir(filename):
-    return os.path.join("Wrestlers", filename)
+    return os.path.join(util.JOWST_PATH, "Wrestlers", filename)
 
 class WrestlerDB(BaseDB):
     def __init__(self):
